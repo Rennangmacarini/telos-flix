@@ -1,0 +1,16 @@
+.enjoyForFreeSection .labelSection {
+  display: flex;
+  justify-content: start;
+  align-itens: center;
+  gap: 10px;
+}
+
+.enjoyForFreeSection {
+  width: 100%;
+}
+
+.enjoyForFreeVideosGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+}
