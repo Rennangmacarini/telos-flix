@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;800&display=swap&#39');
 
 button.primaryGradientButton {
+cursor: pointer;
 background: linear-gradient(272.56deg, #8EC5FC -13.13%, #E0C3FC 42.75%, #FAE69F 82.67%);
 border: transparent;
 

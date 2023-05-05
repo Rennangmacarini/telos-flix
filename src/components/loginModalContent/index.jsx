@@ -1,17 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 import "./index.css"
 import image from './image.png'
-import { FormControl, IconButton, InputAdornment, OutlinedInput } from "@mui/material";
-import { AddBoxOutlined, Email, Visibility } from "@mui/icons-material";
+import { FormControl, IconButton, InputAdornment } from "@mui/material";
+import { AddBoxOutlined, Email } from "@mui/icons-material";
 import PrimaryGradientButton from "../primaryGradientButton";
 import SecondaryGradientButton from "../secondaryGradientButton";
+import CustomOutlinedInput from "../customOutlinedInput";
+import PasswordOutlinedInput from "../passwordOutlinedInput";
 
 export default function LoginModalContent() {
+  const [email, setEmail] = useState(""); 
+  const [password, setPassword] = useState("");
+
   return (
     <div className="loginModalContent">
       <div className="firstSection">
         Login
-
         <div className="imageContainer">
           <img width="295px" height="127px" src={image} alt="image" />
         </div>
@@ -20,49 +24,15 @@ export default function LoginModalContent() {
         <FormControl sx={{m:1, width: "366px"}}>
         <div className="inputContainer">
         <label className="inputLabel">Email</label>
-          <OutlinedInput
-          sx={{background: "rgba(238, 238, 238, 0.05)", 
-          color: "#eeeeee",
-          border: "1px solid rgba(238, 238, 238, 0.05)", 
-          boxShadow:"0px 3px 2px rgba(0, 0, 0, 0.05)",
-          borderRadius: "14px"
-        }}
-          id= "filled-adorment-username"
-          type= "text"
-          placeholder="Email"
-          startAdornment={
-            <InputAdornment>
+        <CustomOutlinedInput setValue={setEmail} placeholder="Email" type="text" startAdornment={<InputAdornment>
              <IconButton>
               <Email sx={{ color: "#eeeeee" }}/>
              </IconButton>
-            </InputAdornment>
-          }
-          >
-
-          </OutlinedInput>
+            </InputAdornment>}/>
         </div>
            <div className="inputContainer" style={{  marginTop: "30px"}}>
            <label className="inputLabel">Senha</label>
-          <OutlinedInput
-          sx={{background: "rgba(238, 238, 238, 0.05)", 
-          color: "#eeeeee",
-          border: "1px solid rgba(238, 238, 238, 0.05)", 
-          boxShadow:"0px 3px 2px rgba(0, 0, 0, 0.05)",
-          borderRadius: "14px"
-        }}
-          id= "filled-adorment-password"
-          type= "password"
-          placeholder="Senha"
-          startAdornment={
-            <InputAdornment>
-             <IconButton>
-              <Visibility sx={{ color: "#eeeeee" }}/>
-             </IconButton>
-            </InputAdornment>
-          }
-          >
-
-          </OutlinedInput>
+           <PasswordOutlinedInput setValue={setPassword}/>
            </div>
            <div className="buttonsSection">
            <PrimaryGradientButton
