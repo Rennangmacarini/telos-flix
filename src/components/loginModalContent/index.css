@@ -6,7 +6,7 @@
   padding: 0 !important;
 }
 
-.firstSection {
+.loginModalContent .firstSection {
   background: rgba(238, 238, 238, 0.05);
   height: 100%;
 
@@ -22,20 +22,20 @@
   flex-direction: column;
 }
 
-.firstSection .imageContainer {
+.loginModalContent .firstSection .imageContainer {
    margin-top : 96px;
    width: 100%;
    display: flex;
    justify-content: end;
 }
 
-.secondSection{
+.loginModalContent .secondSection{
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.secondSection .inputLabel{
+.loginModalContent .secondSection .inputLabel{
 font-style: normal;
 font-weight: 800;
 font-size: 16px;
@@ -43,7 +43,7 @@ line-height: 20px;
 color: #EEEEEE;
 }
 
-.secondSection .inputContainer {
+.loginModalContent .secondSection .inputContainer {
   display: flex;
   flex-direction: column;
   gap: 8px;
@@ -56,7 +56,7 @@ color: #EEEEEE;
   gap: 16px;
 }
 
-.secondSection .buttonsSection .primaryGradientButton, .secondSection .buttonsSection .secondaryGradientButton {
+ .secondSection .buttonsSection .primaryGradientButton, .loginModalContent .firstSection .buttonsSection .secondaryGradientButton {
   height: 50px !important;
   border-radius: 20px;
 }

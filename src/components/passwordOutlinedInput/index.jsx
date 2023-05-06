@@ -3,7 +3,7 @@ import { IconButton, InputAdornment } from '@mui/material'
 import React, { useState } from 'react'
 import CustomOutlinedInput from '../customOutlinedInput'
 
-export default function PasswordOutlinedInput({ setValue }){
+export default function PasswordOutlinedInput({ setValue, placeholder }){
     const [shouldShowPassword, setShouldShowPassword] = useState(false);
 
     const onIconButtonClicked = ()=>{
@@ -13,7 +13,7 @@ export default function PasswordOutlinedInput({ setValue }){
     return(
         <CustomOutlinedInput
         setValue={setValue}
-        placeholder="Senha"
+        placeholder={placeholder ?? "Senha"}
         type={shouldShowPassword ? "text" : "password"}
         startAdornment = {
             <InputAdornment>

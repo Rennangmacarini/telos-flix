@@ -8,7 +8,7 @@ import SecondaryGradientButton from "../secondaryGradientButton";
 import CustomOutlinedInput from "../customOutlinedInput";
 import PasswordOutlinedInput from "../passwordOutlinedInput";
 
-export default function LoginModalContent() {
+export default function LoginModalContent({ setCreateAccountContent }) {
   const [email, setEmail] = useState(""); 
   const [password, setPassword] = useState("");
 
@@ -40,6 +40,7 @@ export default function LoginModalContent() {
            />
            <SecondaryGradientButton
            text="Quero criar uma conta"
+           onClick={setCreateAccountContent}
            icon={<AddBoxOutlined/>}
            />
            </div>

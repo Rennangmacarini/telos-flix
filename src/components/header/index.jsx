@@ -20,6 +20,7 @@ import CreateAccountButton from "../createAccountButton";
 import AppBarActions from "../appBarAcctions";
 import CustomModal from "../custommodal";
 import LoginModalContent from "../loginModalContent";
+import CreateAccountModalContent from "../createAccountModalContent";
 
 const drawerWidth = 240;
 
@@ -114,15 +115,13 @@ export default function Header() {
             actions={[
               <CreateAccountButton
                 onClick={() => {
-                  setContentToShow(<div>
-                    Create account
-                  </div>);
+                  setContentToShow(<CreateAccountModalContent />);
                   setOpen(true);
                 }}
               />,
               <LoginButton
                 onClick={() => {
-                  setContentToShow(<LoginModalContent />);
+                  setContentToShow(<LoginModalContent setCreateAccountContent={() => { setContentToShow(<CreateAccountModalContent />) }} />);
                   setOpen(true);
                 }}
               />,

@@ -6,35 +6,28 @@
     padding: 0 !important;
   }
   
-  .firstSection {
+  .createAccountModalContent .firstSection {
     height: 100%;
-  
     padding: 72px;
-  
-    font-family: "Plus Jakarta Sans";
+
+    display: flex;
+    flex-direction: column;
+  }
+
+  .createAccountModalContent .secondSection{
+    height: 100%;
+    padding: 15px 72px;
+  }
+
+  .createAccountModalContent .firstSection >span {
     font-style: normal;
     font-weight: 800;
     font-size: 34px;
     line-height: 38px;
-  
-    display: flex;
-    flex-direction: column;
   }
-  
-  .firstSection .imageContainer {
-     margin-top : 96px;
-     width: 100%;
-     display: flex;
-     justify-content: end;
-  }
-  
-  .secondSection{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .secondSection .inputLabel{
+
+  .createAccountModalContent .firstSection .inputLabel,
+  .createAccountModalContent .secondSection .inputLabel{
   font-style: normal;
   font-weight: 800;
   font-size: 16px;
@@ -42,20 +35,23 @@
   color: #EEEEEE;
   }
   
-  .secondSection .inputContainer {
+  .createAccountModalContent .firstSection .inputContainer, 
+  .createAccountModalContent .secondSection .inputContainer {
     display: flex;
     flex-direction: column;
     gap: 8px;
   }
   
-  .secondSection .buttonsSection {
-    margin-top: 88px;
+  .createAccountModalContent .firstSection .buttonsSection,
+  .createAccountModalContent .secondSection .buttonsSection {
+    margin-top: 48px;
     display: flex;
     flex-direction: column;
     gap: 16px;
   }
   
-  .secondSection .buttonsSection .primaryGradientButton, .secondSection .buttonsSection .secondaryGradientButton {
+  .createAccountModalContent .secondSection .buttonsSection .primaryGradientButton, 
+  .createAccountModalContent .secondSection  .buttonsSection .secondaryGradientButton {
     height: 50px !important;
     border-radius: 20px;
   }
